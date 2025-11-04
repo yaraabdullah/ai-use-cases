@@ -267,10 +267,7 @@ body {
     animation: floatIcon 3s ease-in-out infinite;
     background: transparent !important;
     object-fit: contain;
-    /* Remove white background using screen blend mode - makes white transparent on dark backgrounds */
-    mix-blend-mode: screen;
     filter: drop-shadow(0 0 10px var(--primary-color));
-    /* Alternative: use multiply for light backgrounds, screen for dark backgrounds */
 }
 
 @keyframes floatIcon {
