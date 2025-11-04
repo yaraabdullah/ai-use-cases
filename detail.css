@@ -61,8 +61,8 @@
 
 .detail-subtitle {
     font-size: 1.3rem;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-color);
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--text-light);
 }
 
 /* Timeline Container */
