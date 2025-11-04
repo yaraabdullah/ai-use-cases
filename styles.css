@@ -179,8 +179,8 @@ body {
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-color);
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--text-light);
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
