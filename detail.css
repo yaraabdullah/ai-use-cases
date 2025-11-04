@@ -1,0 +1,287 @@
+.detail-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Back Button */
+.back-button {
+    position: relative;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 0, 255, 0.2));
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    text-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    box-shadow: 
+        0 0 30px var(--primary-color),
+        0 0 50px var(--primary-color);
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.3), rgba(255, 0, 255, 0.3));
+}
+
+.back-button span {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Detail Header */
+.detail-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.detail-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--text-light);
+    text-shadow: 
+        0 0 10px var(--primary-color),
+        0 0 20px var(--primary-color),
+        0 0 30px var(--primary-color);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.detail-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, 
+        var(--primary-color), 
+        var(--secondary-color), 
+        var(--accent-color));
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px var(--primary-color);
+    animation: timelinePulse 3s ease-in-out infinite;
+}
+
+@keyframes timelinePulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    margin-bottom: 80px;
+    animation: fadeIn 0.8s ease-out both;
+}
+
+.video-section:nth-child(2) { animation-delay: 0.2s; }
+.video-section:nth-child(3) { animation-delay: 0.4s; }
+.video-section:nth-child(4) { animation-delay: 0.6s; }
+
+.video-card {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(255, 0, 255, 0.1));
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-color), transparent);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.video-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 
+        0 0 30px var(--primary-color),
+        0 0 60px var(--primary-color),
+        inset 0 0 30px rgba(0, 240, 255, 0.1);
+    transform: translateY(-10px) scale(1.02);
+}
+
+.video-card:hover::before {
+    opacity: 0.2;
+}
+
+/* Time Badge */
+.time-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 0 20px currentColor;
+    z-index: 10;
+}
+
+.time-badge.past {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    box-shadow: 0 0 20px #ff6b6b;
+}
+
+.time-badge.now {
+    background: linear-gradient(135deg, var(--primary-color), #0099cc);
+    color: white;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.time-badge.future {
+    background: linear-gradient(135deg, var(--accent-color), #00cc66);
+    color: white;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.video-card h2 {
+    font-size: 2rem;
+    margin: 30px 0 15px 0;
+    text-align: center;
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.video-card .description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(255, 0, 255, 0.1));
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.video-placeholder:hover {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 0, 255, 0.2));
+}
+
+.video-placeholder .play-button {
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--primary-color);
+    margin-bottom: 20px;
+    animation: pulsePlay 2s ease-in-out infinite;
+}
+
+@keyframes pulsePlay {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.video-placeholder p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.video-placeholder .hint {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Embedded Video */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .detail-title {
+        font-size: 2.5rem;
+    }
+    
+    .detail-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .video-card {
+        padding: 30px 20px;
+        margin-left: 40px;
+    }
+    
+    .time-badge {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+    
+    .video-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
