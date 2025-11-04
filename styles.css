@@ -208,7 +208,6 @@ body {
 .use-case-box:nth-child(5) { animation-delay: 0.5s; }
 .use-case-box:nth-child(6) { animation-delay: 0.6s; }
 .use-case-box:nth-child(7) { animation-delay: 0.7s; }
-.use-case-box:nth-child(8) { animation-delay: 0.8s; }
 
 .box-content {
     position: relative;
@@ -262,10 +261,13 @@ body {
 }
 
 .box-content .icon {
-    font-size: 4rem;
+    width: 80px;
+    height: 80px;
     margin-bottom: 20px;
     filter: drop-shadow(0 0 10px var(--primary-color));
     animation: floatIcon 3s ease-in-out infinite;
+    background: transparent;
+    object-fit: contain;
 }
 
 @keyframes floatIcon {
@@ -352,7 +354,8 @@ body {
     }
     
     .box-content .icon {
-        font-size: 3rem;
+        width: 60px;
+        height: 60px;
     }
     
     .box-content h2 {

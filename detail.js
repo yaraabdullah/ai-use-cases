@@ -28,8 +28,7 @@ function updatePageContent(field) {
         sport: 'Sports',
         finance: 'Finance',
         transportation: 'Transportation',
-        entertainment: 'Entertainment',
-        agriculture: 'Agriculture'
+        entertainment: 'Entertainment'
     };
     
     const fieldTitle = document.getElementById('fieldTitle');
@@ -74,11 +73,6 @@ function loadVideos(field) {
             future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
         },
         entertainment: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
-        },
-        agriculture: {
             past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
             now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
             future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
