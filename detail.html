@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Use Case Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="particles"></div>
+    
+    <div class="detail-container">
+        <button class="back-button" onclick="goBack()">
+            <span>←</span> Back to Home
+        </button>
+
+        <header class="detail-header">
+            <h1 class="detail-title" id="fieldTitle"></h1>
+            <p class="detail-subtitle">Journey Through Time: Past, Present, and Future</p>
+        </header>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="video-section" id="pastSection">
+                <div class="video-card">
+                    <div class="time-badge past">PAST</div>
+                    <h2>Before AI Revolution</h2>
+                    <p class="description">Discover how this field operated before the AI era</p>
+                    <div class="video-wrapper">
+                        <div class="video-placeholder" id="pastVideo">
+                            <div class="play-button">▶</div>
+                            <p>Video will load here</p>
+                            <p class="hint">Replace with your video URL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section" id="nowSection">
+                <div class="video-card">
+                    <div class="time-badge now">NOW</div>
+                    <h2>Current AI Integration</h2>
+                    <p class="description">See how AI is transforming this field today</p>
+                    <div class="video-wrapper">
+                        <div class="video-placeholder" id="nowVideo">
+                            <div class="play-button">▶</div>
+                            <p>Video will load here</p>
+                            <p class="hint">Replace with your video URL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section" id="futureSection">
+                <div class="video-card">
+                    <div class="time-badge future">FUTURE</div>
+                    <h2>AI-Powered Future</h2>
+                    <p class="description">Glimpse into the future possibilities with AI</p>
+                    <div class="video-wrapper">
+                        <div class="video-placeholder" id="futureVideo">
+                            <div class="play-button">▶</div>
+                            <p>Video will load here</p>
+                            <p class="hint">Replace with your video URL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="detail.js"></script>
+</body>
+</html>
+
