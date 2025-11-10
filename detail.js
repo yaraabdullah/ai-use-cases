@@ -91,7 +91,7 @@ function loadVideos(field) {
         // If video URL contains placeholder, show placeholder div
         if (videoUrl && !videoUrl.includes('YOUR_VIDEO_ID_HERE')) {
             const wrapper = placeholder.parentElement;
-            wrapper.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            wrapper.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: auto;"></iframe>`;
         } else {
             // Add click handler to placeholder to load video
             placeholder.addEventListener('click', function() {
@@ -101,9 +101,9 @@ function loadVideos(field) {
                     if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
                         // Convert YouTube URL to embed format
                         const embedUrl = convertToEmbedUrl(videoUrl);
-                        wrapper.innerHTML = `<iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                        wrapper.innerHTML = `<iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: auto;"></iframe>`;
                     } else {
-                        wrapper.innerHTML = `<video controls style="width: 100%; height: 100%;"><source src="${videoUrl}" type="video/mp4"></video>`;
+                        wrapper.innerHTML = `<video controls style="width: 100%; height: auto;"><source src="${videoUrl}" type="video/mp4"></video>`;
                     }
                 }
             });
