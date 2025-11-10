@@ -43,9 +43,9 @@ function loadVideos(field) {
     
     const videoData = {
         healthcare: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
+            past: 'videos/healthcare before.mp4',
+            now: 'videos/healthcare now.mp4',
+            future: 'videos/healthcare future.mp4'
         },
         business: {
             past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
