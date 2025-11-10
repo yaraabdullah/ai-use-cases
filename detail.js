@@ -91,7 +91,11 @@ function loadVideos(field) {
         // If video URL contains placeholder, show placeholder div
         if (videoUrl && !videoUrl.includes('YOUR_VIDEO_ID_HERE')) {
             const wrapper = placeholder.parentElement;
-            wrapper.innerHTML = `<iframe class="embedded-media" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            if (isVideoFile(videoUrl)) {
+                wrapper.innerHTML = `<video class="embedded-media" controls><source src="${videoUrl}" type="video/mp4"></video>`;
+            } else {
+                wrapper.innerHTML = `<iframe class="embedded-media" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            }
         } else {
             // Add click handler to placeholder to load video
             placeholder.addEventListener('click', function() {
@@ -102,8 +106,11 @@ function loadVideos(field) {
                         // Convert YouTube URL to embed format
                         const embedUrl = convertToEmbedUrl(videoUrl);
                         wrapper.innerHTML = `<iframe class="embedded-media" src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    } else if (isVideoFile(videoUrl)) {
+                        const extension = videoUrl.split('.').pop().split('?')[0].toLowerCase();
+                        wrapper.innerHTML = `<video class="embedded-media" controls><source src="${videoUrl}" type="video/${extension}"></video>`;
                     } else {
-                        wrapper.innerHTML = `<video class="embedded-media" controls><source src="${videoUrl}" type="video/mp4"></video>`;
+                        wrapper.innerHTML = `<iframe class="embedded-media" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                     }
                 }
             });
@@ -126,6 +133,10 @@ function convertToEmbedUrl(url) {
     }
     
     return url;
+}
+
+function isVideoFile(url) {
+    return /\.(mp4|webm|ogg)(\?.*)?$/i.test(url);
 }
 
 function observeVideoSections() {
