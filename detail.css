@@ -193,7 +193,7 @@
 /* Video Wrapper */
 .video-wrapper {
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
