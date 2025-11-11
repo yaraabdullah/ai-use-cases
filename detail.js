@@ -25,10 +25,7 @@ function updatePageContent(field) {
         healthcare: 'Healthcare',
         business: 'Business',
         education: 'Education',
-        sport: 'Sports',
-        finance: 'Finance',
-        transportation: 'Transportation',
-        entertainment: 'Entertainment'
+        transportation: 'Transportation'
     };
     
     const fieldTitle = document.getElementById('fieldTitle');
@@ -57,22 +54,7 @@ function loadVideos(field) {
             now: 'videos/education now.mp4',
             future: 'videos/education future.mp4'
         },
-        sport: {
-            past: 'videos/sports before.mp4',
-            now: 'videos/sports now.mp4',
-            future: 'videos/sports future.mp4'
-        },
-        finance: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
-        },
         transportation: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
-        },
-        entertainment: {
             past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
             now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
             future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
