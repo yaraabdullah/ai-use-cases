@@ -48,19 +48,19 @@ function loadVideos(field) {
             future: 'videos/healthcare future.mp4'
         },
         business: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
+            past: 'videos/business before.mp4',
+            now: 'videos/business now.mp4',
+            future: 'videos/business future.mp4'
         },
         education: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
+            past: 'videos/education before.mp4',
+            now: 'videos/education now.mp4',
+            future: 'videos/education future.mp4'
         },
         sport: {
-            past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            now: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
-            future: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE'
+            past: 'videos/sports before.mp4',
+            now: 'videos/sports now.mp4',
+            future: 'videos/sports future.mp4'
         },
         finance: {
             past: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE',
