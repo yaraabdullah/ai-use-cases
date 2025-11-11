@@ -193,11 +193,14 @@
 /* Video Wrapper */
 .video-wrapper {
     position: relative;
-    display: flex;
+    display: inline-flex;
+    width: fit-content;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
+    align-self: center;
+    flex: none;
     width: auto;
     max-width: 100%;
     background: rgba(0, 0, 0, 0.35);
