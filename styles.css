@@ -187,9 +187,13 @@ body {
 /* Use Cases Grid */
 .use-cases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Force a 2 x 2 layout on larger screens */
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 30px;
     padding: 20px;
+    /* Center the 2-column grid in the middle horizontally */
+    justify-content: center;
+    justify-items: center;
 }
 
 /* Use Case Box */
@@ -344,8 +348,11 @@ body {
     }
     
     .use-cases-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Stack cards on small screens */
+        grid-template-columns: 1fr;
         gap: 20px;
+        justify-content: center;
+        justify-items: center;
     }
     
     .use-case-box {
