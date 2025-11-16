@@ -191,6 +191,9 @@ body {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 30px;
     padding: 20px;
+    /* Keep the grid itself a bit narrower so columns sit closer together */
+    max-width: 900px;
+    margin: 0 auto;
     /* Center the 2-column grid in the middle horizontally */
     justify-content: center;
     justify-items: center;
